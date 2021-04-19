@@ -33,12 +33,12 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 //Routes of all the pages
-// app.get('/', (req, res) => {
-//     res.render('index', {
-//         title: 'Weather',
-//         name: 'Daniel Sosimi'
-//     })
-// })
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'Weather',
+        name: 'Daniel Sosimi'
+    })
+})
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'about me',
@@ -56,10 +56,6 @@ app.get('/help', (req, res) => {
 
 
 app.get('/weather', (req, res) => {
-    res.render('index', {
-        title: 'Weather',
-        name: 'Daniel Sosimi'
-    })
     const address = req.query.address
     if(!address){
         return res.send({
