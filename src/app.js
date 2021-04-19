@@ -33,7 +33,7 @@ app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 //Routes of all the pages
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', {
         title: 'Weather',
         name: 'Daniel Sosimi'
