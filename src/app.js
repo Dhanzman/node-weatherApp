@@ -41,16 +41,16 @@ app.get('/', (req, res) => {
 })
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'about me',
+        title: 'About me',
         name: 'Daniel Sosimi'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'help',
+        title: 'Help',
         name: 'Daniel Sosimi',
-        message: 'what are you doing to my life'
+        message: 'How can I help you?'
     })
 })
 
