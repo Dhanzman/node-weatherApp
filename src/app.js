@@ -9,6 +9,9 @@ const forecast = require('../../weather-app/utils/forecast')
 //  Initializing express
 const app = express()
 
+// Port of the server
+const port = process.env.PORT || 3000
+
 // Initializing morgan
 
 app.use(morgan('tiny'))
@@ -105,6 +108,6 @@ app.use('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is working')
+app.listen(port, () => {
+    console.log('Server is working on ' + port)
 })
