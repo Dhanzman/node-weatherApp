@@ -1,6 +1,6 @@
 const path = require('path')
 const express = require('express')
-const morgan = require('morgan')
+// const morgan = require('morgan')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('../../weather-app/utils/forecast')
@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000
 
 // Initializing morgan
 
-app.use(morgan('tiny'))
+// app.use(morgan('tiny'))
 
 
 // Define path for express config
